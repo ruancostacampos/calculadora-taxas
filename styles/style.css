@@ -9,6 +9,7 @@ html {
     font-family: 'Inter', sans-serif;
     background-color: #F9F9FC;
     color: white;
+    overflow-x: hidden;
 }
 
 section{
