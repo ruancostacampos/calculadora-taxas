@@ -1,4 +1,4 @@
-const taxes = [4.5, 5.8, 6.8, 7.8, 8.8, 9.8, 10.5, 11.5, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5];
+const taxes = [4.5, 5.8, 6.8, 7.8, 8.8, 9.8, 10.5, 11.5, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 17, 18];
 
 let loanValue = document.getElementById('loanValue');
 let parcel = document.getElementById('parcel');
