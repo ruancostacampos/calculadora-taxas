@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de empréstimo</title>
+    <link rel="stylesheet" href="styles/normalize.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div >
+    <section>
+        <div class="container">
+            <h1>Calculadora de taxas</h1>
+            <div class="input-container">
+                <label class="loan-label" for="loanValue">Digite o valor:</label>
+                <input 
+                    id="loanValue" 
+                    name="loanValue" 
+                    type="text"
+                    value="100000"
+                    oninput="validateNumber(this)"
+                    spellcheck="false"
+                >
+            </div>
+            <div class="parcel-container">
+                <label for="parcel">Escolha o número de parcelas:</label>
+                <select onchange="calculateTax()" name="parcel" id="parcel" class="input">
+                    <option value="1" selected="">1x</option>
+                    <option value="2">2x</option>
+                    <option value="3">3x</option>
+                    <option value="4">4x</option>
+                    <option value="5">5x</option>
+                    <option value="6">6x</option>
+                    <option value="7">7x</option>
+                    <option value="8">8x</option>
+                    <option value="9">9x</option>
+                    <option value="10">10x</option>
+                    <option value="11">11x</option>
+                    <option value="12">12x</option>
+                    <option value="13">13x</option>
+                    <option value="14">14x</option>
+                    <option value="15">15x</option>
+                    <option value="16">16x</option>
+                    <option value="17">17x</option>
+                    <option value="18">18x</option>
+                </select>
+            </div>
+            <div class="checkbox-container">
+                <label class="checkbox-label" for="checkbox">Repassar taxas</label>
+                <input 
+                    type="checkbox" 
+                    id="checkbox" 
+                    checked
+                    onclick="calculateTax()"
+                >
+            </div>
+        </div>
+        <p id="result"></p>
+    </section>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
