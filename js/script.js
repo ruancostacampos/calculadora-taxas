@@ -37,9 +37,8 @@ const calculateTax = () => {
 
     // If you want to repass the taxes to the client
     if(checkbox.checked == true){
-       let gap = loanValueFloat - calculatedTax;
        //Calculate the tax
-       calculatedTax = loanValueFloat + gap;
+       calculatedTax = loanValueFloat / (1 - (currentTax/100));
        //Transform the float value to R$1.000
        calculatedTax = calculatedTax.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
        result.innerHTML = `Ao passar <em>${calculatedTax}</em> você recebe <em>${getLoanText()}</em>`;
